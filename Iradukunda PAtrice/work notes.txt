@@ -1,0 +1,32 @@
+create database ruhande;
+
+insert into ngoma values(10,"phionah","mutoni","f","east","rwamagana","nyahasambu","nyagasambu","phiona123@gmail.com",0783445625);
+Query OK, 1 row affected (0.003 sec)
+
+
+MariaDB [ruhande]> select * from ngoma;
++------+----------+------------+--------+-------------+-----------+-------------+-----------+----------------------------+------------+-------+
+| id   | f_name   | l_name     | gender | province    | district  | sector      | cell      | email                      | tel        | marks |
++------+----------+------------+--------+-------------+-----------+-------------+-----------+----------------------------+------------+-------+
+| 6    | emmanuel | NDAHIRO    | M      | kigali city | gasabo    | gikondo     | giondo    | iradukunda@gmail.com       |  789123456 |    90 |
+| 7    | Narada   | Hirwa      | F      | north       | burera    | cyanika     | kabyiniro | musabikafidele@gmail.com   |  788236249 |    90 |
+| 7    | Narada   | Hirwa      | F      | west        | rubavu    | mbuga ngari | rubavu    | mugishayves@gmail.com      | 2147483647 |    90 |
+| 8    | Bella    | Zahabu     | F      | east        | nyagatare | kagitumba   | rukomo    | rudasiallan@gmail.com      |  781234569 |    90 |
+| 10   | mpumure  | esperance  | F      | east        | nyagatare | nyagatare   | mayange   | mpumureesperance@gmail.com | 2147483647 |    82 |
+| 1    | patrice  | iradukunda | M      | kigali city | gasabo    | gikondo     | giondo    | iradukunda@gmail.com       |  789123456 |    90 |
+| 2    | Fidele   | MUSABIKA   | M      | north       | burera    | cyanika     | kabyiniro | musabikafidele@gmail.com   |  788236249 |    90 |
+| 3    | yves     | mugisha    | M      | west        | rubavu    | mbuga ngari | rubavu    | mugishayves@gmail.com      | 2147483647 |    90 |
+| 4    | allan    | rudasingwa | M      | east        | nyagatare | kagitumba   | rukomo    | rudasiallan@gmail.com      |  781234569 |    90 |
+| 5    | mpumure  | esperance  | F      | east        | nyagatare | nyagatare   | mayange   | mpumureesperance@gmail.com | 2147483647 |    82 |
++------+----------+------------+--------+-------------+-----------+-------------+-----------+----------------------------+------------+-------+
+
+
+
+MariaDB [ruhande]> select * from ngoma where id = 1 or province = "kigali city";
++------+----------+------------+--------+-------------+----------+---------+--------+----------------------+-----------+-------+
+| id   | f_name   | l_name     | gender | province    | district | sector  | cell   | email                | tel       | marks |
++------+----------+------------+--------+-------------+----------+---------+--------+----------------------+-----------+-------+
+| 6    | emmanuel | NDAHIRO    | M      | kigali city | gasabo   | gikondo | giondo | iradukunda@gmail.com | 789123456 |    90 |
+| 1    | patrice  | iradukunda | M      | kigali city | gasabo   | gikondo | giondo | iradukunda@gmail.com | 789123456 |    90 |
++------+----------+------------+--------+-------------+----------+---------+--------+----------------------+-----------+-------+
+2 rows in set (0.000 sec)
